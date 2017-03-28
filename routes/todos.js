@@ -81,7 +81,7 @@ router.put('/todo/:id', function (req, res, next){
 // Delete Todo
 router.delete('/todo/:id', function (req, res, next){
 
-    db.todo.delete({
+    db.todo.remove({
         _id: mongojs.OjectId(req.params.id)
     }, '', function(err, result){
         if(err){
